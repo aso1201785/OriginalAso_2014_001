@@ -11,18 +11,69 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="おみくじ"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_weight="0.15" >
 
-        <Button
-            android:id="@+id/btnOK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OK" />
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txvMsg2"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="52dp"
+                android:text="OK" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/edtName"
+                android:layout_alignLeft="@+id/btnOK"
+                android:text="なまえ"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnOK"
+                android:layout_marginBottom="28dp"
+                android:layout_toRightOf="@+id/btnOK"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/txvMsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/edtName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="なまえを入力してください"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="59dp"
+                android:text="おみくじ"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:scaleType="fitXY"
+                android:src="@drawable/main" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
